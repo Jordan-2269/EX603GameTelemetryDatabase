@@ -1,0 +1,44 @@
+players
+
+Relation schema: players(player_id, display_name)
+Domains:
+player_id — Integer, positive, auto-incrementing
+display_name — Variable-length string (e.g. VARCHAR(50)), non-null
+Primary key: player_id
+
+matches
+
+Relation schema: matches(match_id, match_name, is_ranked, duration_minutes)
+Domains:
+match_id — Integer, positive, auto-incrementing
+match_name — Variable-length string (e.g. VARCHAR(100)), non-null
+is_ranked — Boolean (TRUE/FALSE)
+duration_minutes — Integer, non-negative
+Primary key: match_id
+
+match_participants
+
+Relation schema: match_participants(participant_id, player_id, match_id, played_at, score)
+Domains:
+participant_id — Integer, positive, auto-incrementing
+player_id — Integer, must match an existing players.player_id
+match_id — Integer, must match an existing matches.match_id
+played_at — Timestamp (date + time), non-null
+score — Integer, non-negative
+Primary key: participant_id
+
+game_modes
+
+Relation schema: game_modes(game_mode_id, mode_name)
+Domains:
+game_mode_id — Integer, positive, auto-incrementing
+mode_name — Variable-length string (e.g. VARCHAR(50)), non-null
+Primary key: game_mode_id
+
+match_modes
+
+Relation schema: match_modes(match_id, game_mode_id)
+Domains:
+match_id — Integer, must match an existing matches.match_id
+game_mode_id — Integer, must match an existing game_modes.game_mode_id
+Primary key: (match_id, game_mode_id) — composite
