@@ -1,3 +1,4 @@
-<img width="860" height="564" alt="Untitled" src="https://github.com/user-attachments/assets/454f64cf-86fb-4032-a561-1d0d57da8ae9" />
+<img width="860" height="564" alt="game-telemetry-erd" src="https://github.com/user-attachments/assets/0b48ea01-be24-4dd2-b3c5-3a8d1d114adf" />
+
 # EX603GameTelemetryDatabase
 Derek Campbell, Game Telemetry, Used to store manage and secure data in a query structure
