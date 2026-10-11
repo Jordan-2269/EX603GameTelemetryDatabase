@@ -1,1 +1,10 @@
+# Unit 3 Finding: The Failure Rate on the Dashboard Is Overstated
 
+**To:** Dashboard team
+**From:** Trust and Data team
+
+The dashboard reports that about half of all match participations end in failure, and leadership froze this quarter's payout based on that number. When we went back to the underlying records, the data tells a different story. Of the 200 participations recorded, 156 (78%) finished normally, 34 (17%) were abandoned, and 10 (5%) are marked as "contested," meaning the result is disputed and under review. Even if every contested result is counted as a failure, the failure rate is at most 22%, well under half.
+
+The gap comes from how the dashboard's query handles records with a blank field. A participation that finishes normally has no disconnect reason, so that field is left empty, and 166 of the 200 records are like this. When the query compared that field against a value, the database treated the blank entries as "unknown" rather than "different," and quietly left them out instead of raising an error. Most of the successful matches dropped out of the count, so the failures made up a much larger share of what remained. Because the query ran cleanly and produced a believable number, nobody had reason to question it. The query also treated outcomes as simply "finished" or "failed," but the data has a third outcome, "contested," that has to be handled on purpose rather than left to fall into one group or the other.
+
+We recommend lifting the freeze on the quarterly payout, since the reason for it does not hold up: the actual failure rate is around 17%, not 50%. The 10 contested results involve 7 players, and any portion of the payout that depends on those specific results can be held until the disputes are resolved, without delaying everything else. We have written a corrected version of the query that accounts for every record and reports contested results separately, and we suggest the dashboard switch to it. Going forward, we also suggest a simple check on any dashboard number used for a decision: confirm that the groups being compared add up to the total number of records. That check alone would have caught this error.
