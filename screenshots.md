@@ -53,6 +53,39 @@ Screenshots
 3_3 Version 3
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a7758b14-0623-46b7-9d5c-013998d23c82" />
 
+4_1 Question 1 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2d3ebad2-90bf-490b-acd0-c38002c5d523" />
+
+4_1 Question 1 Follow up
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4915076e-1689-455f-9a88-4a667a3a1b44" />
+
+4_1 Question 2
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d98bd4cb-2f96-42c8-bafd-0c4f5883e45c" />
+
+4_1 Question 3
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/54f01e36-4f68-4fdb-b263-3c4673aaac85" />
+
+4_1 Question 4
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/88aa5ffa-6004-462b-b97d-b1b6c3c52b58" />
+
+4_2 Part A
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/00e5061a-c2ee-44c2-83c3-1cb5187cd0ee" />
+
+4_2 Part B
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/231d72fa-2ddd-4ae0-85a3-fd2f66d995fe" />
+
+4_2 Part C
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/740e8729-c50c-402d-be2c-170c64800a6d" />
+
+4_2 Part C/2
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/675eda37-032a-4fe7-b7dc-6390ce579f39" />
+
+
+
+
+
+
+
 
 
 
