@@ -36,3 +36,18 @@ See the [ERD](schema/erd.png), the full [SQL definition](schema/schema.sql), and
 **Ranked status is a flag, not a mode.** `is_ranked` is a boolean on `matches` with a default of `FALSE`, since every match is either ranked or not. Game modes are kept separate because they are an open-ended list that can grow over time.
 
 **`played_at` is stored per participant.** The timestamp sits on `match_participants` rather than `matches`, so each player's participation is recorded with its own time, which supports activity analysis per player.
+
+### Unit 4: Aggregation and Summaries
+
+| File | Query | Business question it answers |
+|---|---|---|
+| `queries/unit4/q4_1.sql` | Platform summary | Across all match participations, how many events are there, what are the total, average, minimum and maximum scores, and how many different players took part? |
+| `queries/unit4/q4_1.sql` | Zero-score check | Which participation statuses produce zero scores, and are they distorting the average? |
+| `queries/unit4/q4_1.sql` | Events per match | Which matches have the most participation, and how do their average scores compare? |
+| `queries/unit4/q4_1.sql` | Abandon rate (HAVING ≥ 10) | Among matches with enough participations to trust the numbers, which have the highest abandon rates? |
+| `queries/unit4/q4_1.sql` | Region × ranked | How do volume, score and abandon rate differ by server region and ranked vs. unranked play? |
+| `queries/unit4/q4_2.sql` | Part A: Conditional aggregation | For each match, how many participations were there in total, and how many were abandoned, counted in a single pass? |
+| `queries/unit4/q4_2.sql` | Part B: Regional subtotals + grand total | What are the participation and abandon totals for each server region, and for the platform as a whole? |
+| `queries/unit4/q4_2.sql` | Part C: High-volume baseline (CTE) | What abandon rate and average score should we expect from a busy match (15+ participations), as a baseline for judging matches? |
+
+**Analysis:** `analysis/unit4.md` (Task 4.1 and 4.2 write-ups) · `analysis/unit4-finding.md` (leadership finding and reflection)
