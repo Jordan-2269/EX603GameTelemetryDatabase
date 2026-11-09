@@ -1,0 +1,5 @@
+1. What feature could use the three-table join?
+A match history page for players and support staff: each row shows the player's name and gamertag, the match they played, its server region, when they joined, and whether they finished or abandoned. Support could use it to look up "which players were affected by the Match_11 crashes", and Live Ops could filter it by region to see who keeps hitting failures.
+
+2. Why is the junction table important for Question 2?
+A match can have several game modes and each mode belongs to many matches. Match_02 alone has three. match_modes stores each pairing as its own row, so finding "all Survival matches" is a simple join and filter. Without it, the modes would have to be stored as a list inside one column on matches, such as 'CTF, Survival, Ranked Duel'. Then you'd need text matching to find a mode (which is slow and error-prone: a typo or different spelling breaks it), you couldn't enforce that the mode actually exists, and you'd have nowhere to store per-pairing facts like enabled_on.
