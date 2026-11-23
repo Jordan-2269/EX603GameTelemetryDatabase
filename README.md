@@ -160,7 +160,7 @@ Match_14 and Match_15 have no participations, and neither has a game mode config
 
 ## Video presentation
 
-▶️ **[Watch the presentation]([https://youtu.be/q-FHHxmNuUg])** (3–5 minutes): the business question, three representative queries including a Unit 6 window function, the key findings, and one limitation.
+▶️ **[Watch the presentation]** https://youtu.be/q-FHHxmNuUg (3–5 minutes): the business question, three representative queries including a Unit 6 window function, the key findings, and one limitation.
 
 ## How to run it
 
